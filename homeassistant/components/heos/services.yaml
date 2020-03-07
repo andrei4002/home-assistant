@@ -10,3 +10,20 @@ sign_in:
 
 sign_out:
   description: Sign the controller out of the HEOS account.
+  
+join:
+  description: Group players together as a HEOS group.
+  fields:
+    master:
+      description: The HEOS group leader. [Required]
+      example: 'media_player.heos_player1'
+    entity_id:
+      description: Additional media players to be included in the group. [Required]
+      example: 'media_player.heos_player2'
+
+unjoin:
+  description: Unjoin the player from a group.
+  fields:
+    entity_id:
+      description: Name(s) of entities that will be unjoined from their group.
+      example: 'media_player.heos_player2'
