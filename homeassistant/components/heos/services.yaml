@@ -10,3 +10,20 @@ sign_in:
 
 sign_out:
   description: Sign the controller out of the HEOS account.
+  
+join_group:
+  description: Join a media player to a HEOS group.
+  fields:
+    leader:
+      description: The HEOS group leader. [Required]
+      example: 'media_player.heos_player1'
+    members:
+      description: Additional media players to be included in the group. [Required]
+      example: 'media_player.heos_player2'
+
+unjoin_group:
+  description: Remove a media player from a HEOS group.
+  fields:
+    entity_id:
+      description: Removes all grouping from this media player. [Required]
+      example: 'media_player.heos_player2'
